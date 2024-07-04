@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>01_CSS 개요, 선택자 1</title>
+
+  <!-- 
+  link태그 : 현재 HTML과 외부 파일 연결
+
+  rel="stylesheet" : 
+     연결할 파일이 무슨 관계인지 지정
+     -> CSS는 stylesheet(화면 꾸미는 시트지)
+
+  href 속성 : 연결할 파일의 위치(경로/주소)
+   -->
+  <link rel="stylesheet" href="../css/01_CSS개요_선택자1.css">
+  <!-- 
+  " .. " : 상위폴더
+  " / "  : 해당 폴더 내부
+   -->
+
+  <style>
+    /* 스타일 코드 안에선 html 코드는 동작하지 않고 CSS코드만 작동함 */
+    /* CSS */
+
+    /* id가 title인 요소를 선택 */
+    #title {
+      font-family: '궁서체';
+    }
+
+    /* 글꼴 */
+
+    #p1 {
+      text-align: right;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <h1>CSS(<abbr title="종석적 스타일 시트">Cascading Style Sheets</abbr>)</h1>
+
+  <pre id="p1">
+  <a href="https://www.w3schools.com/">코드언어참조</a>
+  <a href="https://www.colorhunt.co"> 색깔사이트</a>
+  <a href="https://noonnu.cc/">폰트사이트</a>
+  <a href="https://flukeout.github.io/">선택자 연습 게임</a>
+  </pre>
+
+  <pre>
+    - 마크업 언어(HTML)가 실제 화면에 표시되는 방법을
+      기술하는 언어
+
+    - 하나의 요소에 여러 CSS 코드를 겹쳐서 원하는 스타일을 만들어냄
+
+    -<abbr title="월드와이드웹 관련기구">W3C</abbr>에서 CSS를 웹 표준으로 지정함
+
+</pre>
+
+<table border="1">
+  <caption style="text-align: left;">
+    &nbsp;&nbsp; - 종류 :
+  </caption>
+  <tr>
+    <td>/</td>
+    <td>종류</td>
+    <td>설명</td>
+    <td>예시</td>
+  </tr>
+  <tr>
+    <td>*</td>
+    <td>id 선택자(#)</td>
+    <td></td>
+    <td>#id속성값 {}</td>
+  </tr>
+  <tr>
+    <td>*</td>
+    <td>tag 선택자(태그명)</td>
+    <td></td>
+    <td>태그명 {}</td>
+  </tr>
+  <tr>
+    <td>*</td>
+    <td>class 선택자(.)</td>
+    <td></td>
+    <td>.class속성값 {}</td>
+  </tr>
+  <tr>
+    <td>*</td>
+    <td>모든 요소 선택자(*, 애스터리스크)</td>
+    <td></td>
+    <td>* {}</td>
+  </tr>
+  <tr>
+    <td>*</td>
+    <td>기본 속성 선택자</td>
+    <td></td>
+    <td>선택자A [속성명 = '속성값'] {}</td>
+  </tr>
+  <tr>
+    <td>*</td>
+    <td>자식 선택자(>, 1단계 하위)</td>
+    <td></td>
+    <td>부모요소 > 자식요소 {}</td>
+  </tr>
+  <tr>
+    <td>*</td>
+    <td>후손 선택자("띄어쓰기", 하위모두)</td>
+    <td></td>
+    <td>부모요소 후손요소 {}</td>
+  </tr>
+  <tr>
+    <td>*</td>
+    <td>포커스가 맞춰 졌을 때(:focus)</td>
+    <td></td>
+    <td>선택자A:focus {} <br>(선택자 A는 input요소)</td>
+  </tr>
+  <tr>
+    <td>*</td>
+    <td>체크가 되었을때(:checked)</td>
+    <td></td>
+    <td>선택자A:checked {} <br>(radio, checkbox 타입만 가능)</td>
+  </tr>
+  <tr>
+    <td>*</td>
+    <td>활성화 상태일 때(:enalbed)</td>
+    <td></td>
+    <td>선택자A:enabled {} (선택자 A는 input요소)</td>
+  </tr>
+  <tr>
+    <td>*</td>
+    <td>비활성화 상태일 때(:disabled)</td>
+    <td>선택자A:disabled {} <br> (선택자 A는 input요소)</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>*</td>
+    <td>마우스를 올렸을 때(:hover)</td>
+    <td></td>
+    <td>선택자A:hover {}</td>
+  </tr>
+  <tr>
+    <td>*</td>
+    <td>클릭을 하고 있을 때(:active)</td>
+    <td></td>
+    <td>선택자A:active {}</td>
+  </tr>
+  <tr>
+    <td>*</td>
+    <td>바로 뒤 형제 선택(+)</td>
+    <td></td>
+    <td>선택자A + 선택자B</td>
+  </tr>
+  <tr>
+    <td>*</td>
+    <td>뒤에 있는 일치하는 형제 모두선택(~, 틸드)</td>
+    <td></td>
+    <td>선택자A ~ 선택자B</td>
+  </tr>
+  <tr>
+    <td colspan="4">* 일반 구조 선택(위치 기준) <br>
+      -> 선택된 요소가 지정된위치의 요소가 맞으면 선택하는 선택자</td>
+  </tr>
+  <tr>
+    <td>*</td>
+    <td></td>
+    <td>선택된 요소가 첫 번째 요소가 맞는 경우</td>
+    <td>선택자A:first-child {}</td>
+  </tr>
+  <tr>
+    <td>*</td>
+    <td></td>
+    <td>선택된 요소가 n번째 요소가 맞는 경우</td>
+    <td>선택자A:nth-child(숫자) {}<br>선택자A:nth-child(수열) {}</td>
+  </tr>
+  </tr>
+    <tr>
+      <td>*</td>
+    <td></td>
+    <td>선택된 요소가 뒤에서 n번째 요소가 맞는 경우</td>
+    <td>선택자A:nth-last-child(숫자) {}<br>선택자A:nth-last-child(수열) {}</td>
+  </tr>
+  <tr>
+    <td colspan="4">* 형태 구조 선택자 <br>
+      -> 선택된 요소가 지정된 요소중 몇 번째 맞으면 선택하는 선택자</td>
+  </tr>
+  <tr>
+    <td>*</td>
+    <td></td>
+    <td>같이 선택된 형제들 중에서 첫번째 요소</td>
+  <td>선택자A:first-of-type {}</td>
+</tr>
+  <tr>
+    <td>*</td>
+    <td></td>
+  <td>같이 선택된 형제들 중에서 마지막 요소</td>
+  <td>선택자A:last-of-type {}</td>
+</tr>
+</tr>
+  <tr>
+    <td>*</td>
+    <td></td>
+  <td>같이 선택된 형제들 중에서 n번째 요소</td>
+  <td>선택자A:nth-of-type(숫자) {}<br>선택자A:nth-of-type(수열) {}</td>
+</tr>
+</tr>
+  <tr>
+    <td>*</td>
+    <td></td>
+  <td>같이 선택된 형제들 중에서 뒤에사 n번째 요소</td>
+  <td>선택자A:nth-last-of-type(숫자) {}<br>선택자A:nth-last-of-type(수열) {}</td>
+</tr>
+<tr>
+  <td colspan="4">* 기타 분류</td>
+</tr>
+<tr>
+  <td>*</td>
+  <td>부정 선택자(:not())</td>
+  <td>-> 특정 요소만 빼고 선택</td>
+  <td>선택자A:not(선택자B) <br> (선택된 A중에서 B만 빼고 선택) </td>
+</tr>
+<tr>
+  <td>*</td>
+  <td></td>
+  <td>여러 선택자 동시 작성</td>
+  <td>선택자A, 선택자B {}</td>
+</tr>
+<tr>
+  <td>*</td>
+  <td></td>
+  <td>여러 클래스를 가진 요소 선택</td>
+  <td>.클래스명A.클래스명B {}</td>
+</tr>
+<tr>
+  <td>*</td>
+  <td></td>
+  <td>특정 태그 중 특정 클래스를 가진 요소 선택</td>
+  <td>태그명.클래스명 {}</td>
+</tr>
+<tr>
+  <td>*</td>
+  <td>:empty</td>
+  <td>자식 노드가 없는 요소 선택</td>
+  <td> 선택자:empty {}</td>
+</tr>
+
+</table>
+
+  <hr>
+
+  <!-- id(식별자) :중복되면 안되는 값, 요소를 쉽게 구분 가능 -->
+  <h1 id="title">CSS 선택자 (CSS Selector)</h1>
+
+  <hr>
+
+  <h3>CSS 코드를 작성하는 방법</h3>
+
+  <ol>
+    <li>
+      head 태그에 style 태그를 작성한 후
+      내부에 css 코드 작성
+    </li>
+    <li style="color: orangered;">
+      CSS가 적용되길 원하는 요소에
+      직접 CSS코드를 작성하는 방법
+      (inline-style)
+    </li>
+    <li id="test1">
+      외부에 .css 파일을 생성하여
+      link 태그를 이용해 연결하는 방법
+    </li>
+  </ol>
+
+  <hr>
+
+  <h3>id(#) 선택자</h3>
+
+  <pre>
+    - HTML 문서 내에서 id 속성값이 
+      일치하는 요소를 선택하는 선택자
+    
+  <strong>[작성법]</strong>
+  <code><!-- 코드쓰는태그 -->
+    #id속성값 {CSS코드}
+  </code>
+
+  </pre>
+
+  <!-- ul>li#li$*3 -->
+  <ul>
+    <li id="li1">&nbsp; id 선택자 테스트 1</li>
+    <li id="li2">&nbsp; id 선택자 테스트 2</li>
+    <li id="li3">&nbsp; id 선택자 테스트 3</li>
+  </ul>
+  
+
+  <hr>
+
+  <h3>태그(태그명) 선택자</h3>
+
+  <pre>
+    - HTML 문서 내에서 태그명이 일치하는 모든 요소를 찾아
+      선택하는 선택자
+
+    <strong>[작성법]</strong>
+    <code>
+      태그명 { CSS코드; }
+    </code>
+  </pre>
+
+  <hr>
+
+  <h3>class(.) 선택자</h3>
+
+  <pre>
+    HTML 문서 내에서 class 속성 값이 일치하는
+    모든 요소를 선택하는 선택자
+
+    * 하나의 요소가 여러 class를 가질 수 있음
+
+    <strong>[작성법]</strong>
+    <code>
+      .class속성값 { CSS코드; }
+    </code>
+    
+    <pre style="color: red;">
+    요소에 CSS 적용을 위해 사용하는 선택자는
+    보통 class 선택자를 가장 많이 이용한다!!
+
+    (id 속성은 주로 JS 용도로 많이 사용)
+    </pre>
+  </pre>
+
+  <p class="class-test1">class 선택자 테스트1</p>
+
+  <p class="class-test2">class 선택자 테스트2</p>
+
+  <p class="class-test1">class 선택자 테스트3</p>
+
+  <p class="class-test2">class 선택자 테스트4</p>
+
+  <p class="class-test1">class 선택자 테스트5</p>
+
+  <br>
+
+  <h4>한 요소에 여러 클래스 작성하기</h4>
+  <ul>
+    <!-- li{class 선택자 테스트}*3 -->
+    <li class="bg-green">class 선택자 테스트</li>
+    <li class="font-pink">class 선택자 테스트</li>
+    <li class="bg-green font-pink">class 선택자 테스트</li>
+    <!-- 띄어쓰기로 여러개의 클래스 적용 -->
+  </ul>
+
+  <hr>
+
+  <h3>모든 요소(*, <abbr title="라틴어, 별">asterlist</abbr>) 선택자</h3>
+  <pre>
+    단독사용 : 문서에 존재하는 모든 요소 선택
+    <code>
+      * { CSS 코드;}
+    </code>
+
+    다른 선택자와 혼용 :
+       선택된 요소의 모든 자식/후손/형제 선택
+
+    <code>
+      A선택자 * { CSS 코드; }
+    </code>
+
+    
+  </pre>
+</body>
+
+</html>

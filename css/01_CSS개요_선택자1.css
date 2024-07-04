@@ -1,0 +1,72 @@
+/* css 파일은 <style> 태그 내부라고 생각 */
+
+/* id가 test1인 요소를 선택 */
+#test1 {
+  color: hotpink;   /* 글자색 */
+  font-weight: bold;   /* 굵기 */
+  font-size: 20px;     /* 글자 크기 */
+}
+
+/* id(#) 선택자 */
+#li1 {
+  font-weight: bold;
+  color: white;
+  background-color: #003285;
+}
+
+#li2 {
+  font-weight: bold;
+  color: white;
+  background-color: #2A629A;
+}
+
+#li3 {
+  font-weight: bold;
+  color: white;
+  background-color: #FF7F3E;
+}
+
+/* 태그 선택자 */
+
+strong {
+  font-size: 18px;
+  font-family: 고딕;
+  color: maroon;
+}
+
+code {
+  background-color: #E2BBE9;
+  display: block; /* 요소를 block 형식으로 변경 */
+  font-weight: bold;
+  color: #402E7A;
+}
+
+/* class(.) 선택자 */
+.class-test1 {
+  background-color: black;
+  color: white;
+}
+
+.class-test2 {
+  background-color: yellow;
+  color: red;
+
+}
+
+/* 한 요소에 여러 클래스 작성하기 */
+.bg-green{background-color: green;}
+.font-pink{color: hotpink;}
+
+/* 웹 폰트 적용 
+  웹 폰트사이트에서 사용 url에 보면
+  명령어까지 같이 써잇음, 그대로 복사*/
+@font-face {
+  font-family: 'HS-Regular';
+  src: url('https://gcore.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/HS-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+/* 모든 요소 (*) 선택자 */
+/* 모든요소 글꼴 변경 */
+/* * {font-family: HS-Regular; }  */
+

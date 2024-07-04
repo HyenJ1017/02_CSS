@@ -1,0 +1,181 @@
+.flex-container{
+  height: 700px;
+  background-color: #FFFAB7;
+
+
+  /* flex container로 지정
+   == item을 유연하게 배치(표시) */
+
+  display: flex;
+
+  /* ************************ */
+
+  /* flex-direction : 중심축 방향 지정
+    -> item이 중심축 방향으로 배치된다. */
+
+  /* 기본값 */  
+  /* flex-direction: row; */
+  /* flex-direction: row-reverse; */
+  /* flex-direction: column; */
+  /* flex-direction: column-reverse; */
+
+  /* ************************ */
+
+  /* justyfy-content : 중심축 방향 정렬 */
+
+  /* 기본값 */
+  /* justify-content: flex-start; */
+  /* justify-content: flex-end; */
+  /* justify-content: center; */
+
+  
+  
+  /* justify-content: space-around; */
+  /* justify-content: space-evenly; */
+  /* justify-content: space-between; */
+
+  /* ************************ */
+
+  /*  align-items 교차축을 기준으로 item 정렬 */
+
+  /* 기본값 */
+  /* item에 교차축 방향 크기가 지정되어 있다면 늘어나지 않음
+    현재 width/ height 지정되어 있음 */
+  /* align-items: stretch; */
+  /* align-items: flex-start; */
+  align-items: flex-end;
+  /* align-items: center; */
+  /* align-items: baseline; */
+  
+}
+
+/* align-items: baseline;
+item에 작성된 내용(content)이
+한 직선에 배치될 수 있도록
+item을 교차축 방향을 알맞게 움직여 배치 */
+.item2{padding: 5px;}
+.item3{padding: 10px;}
+.item4{padding: 15px;}
+.item5{padding: 20px;}
+
+.flex-container2{
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 751px;
+  height: 751px;
+
+  display: flex;
+
+  /* 기본값 */  
+  /* flex-direction: row; */
+  /* flex-direction: row-reverse; */
+  /* flex-direction: column; */
+  /* flex-direction: column-reverse; */
+
+  /* justyfy-content : 중심축 방향 정렬 */
+
+  /* justify-content: flex-start; */
+  /* justify-content: flex-end; */
+  /* justify-content: center; */
+
+  /* 기본값 */
+  /* align-items: stretch; */
+  /* align-items: flex-start; */
+  /* align-items: flex-end; */
+  /* align-items: center; */
+}
+.flex-container3{
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  
+  width: 751px;
+  height: 751px;
+
+
+  display: flex;
+
+  /* 기본값 */  
+  /* flex-direction: row; */
+  /* flex-direction: row-reverse; */
+  flex-direction: column;
+  /* flex-direction: column-reverse; */
+
+  /* justyfy-content : 중심축 방향 정렬 */
+
+  /* justify-content: flex-start; */
+  /* justify-content: flex-end; */
+  /* justify-content: center; */
+
+  /* 기본값 */
+  /* align-items: stretch; */
+  /* align-items: flex-start; */
+  align-items: flex-end;
+  /* align-items: center; */
+}
+.flex-container4{
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  
+  width: 751px;
+  height: 751px;
+
+
+  display: flex;
+
+  /* 기본값 */  
+  /* flex-direction: row; */
+  flex-direction: row-reverse;
+  /* flex-direction: column; */
+  /* flex-direction: column-reverse; */
+
+  /* justyfy-content : 중심축 방향 정렬 */
+
+  /* justify-content: flex-start; */
+  /* justify-content: flex-end; */
+  /* justify-content: center; */
+
+  /* 기본값 */
+  /* align-items: stretch; */
+  /* align-items: flex-start; */
+  align-items: flex-end;
+  /* align-items: center; */
+}
+.flex-container5{
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 751px;
+  height: 751px;
+
+
+
+  display: flex;
+
+  /* 기본값 */  
+  /* flex-direction: row; */
+  /* flex-direction: row-reverse; */
+  /* flex-direction: column; */
+  flex-direction: column-reverse;
+
+  /* justyfy-content : 중심축 방향 정렬 */
+
+  /* justify-content: flex-start; */
+  /* justify-content: flex-end; */
+  /* justify-content: center; */
+
+  /* 기본값 */
+  /* align-items: stretch; */
+  /* align-items: flex-start; */
+  /* align-items: flex-end; */
+  /* align-items: center; */
+}
+
+.container1{
+  position: relative;
+  width: 752px;
+  height: 752px;
+
+}

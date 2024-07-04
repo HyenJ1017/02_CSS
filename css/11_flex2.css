@@ -1,0 +1,104 @@
+
+.flex-container {
+
+  /* viewport : 현재 화면에 보여지고 있는 영역
+                (현재기기, 브라우저)
+    vw : viewport width : 현재 화면의 너비 비례
+                          (100vw : 화면너비의 100%)
+    vh : viewport height: 현재 화면의 높이 비례
+                          (100vh : 화면높이의 100%)
+    -> 반응형에서 많이씀
+
+    height: 75%;  >>> content에 따라 늘어나기도 함*/
+  height: 75vh;
+
+  margin: 30px 20px;
+  background-color: #fffab7;
+
+  /* 내부요소를 유연하게 배치하기 위해
+  감싸는 요소를 flex container로 지정
+  */
+
+  display: flex;
+
+/* <<<<<<<<<<<<<<>>>>>>>>>>>>>>>> */
+
+  /* flex-wrap : 
+  item을 한줄/여러줄로 배치되게 지정  */
+
+  /* 기본값 */
+  /* flex-wrap: nowrap; */
+  flex-wrap: wrap;
+  /* flex-wrap: wrap-reverse; */
+
+/* <<<<<<<<<<<<<<>>>>>>>>>>>>>>>> */
+
+  /* flex-flow : 
+  flex-direction + flex-wrap;
+  (두 속성을 한번에 작성하는 속성) */
+
+  /* flex-flow:column nowrap; */
+  /* flex-flow: column wrap; */
+  /* flex-flow: column-reverse wrap-reverse; */
+
+/* <<<<<<<<<<<<<<>>>>>>>>>>>>>>>> */
+
+  /* align-content : 
+  cross axis(교차축)을 기준으로
+  포장된(wrap) item들을 정렬
+  (교차축방향item묶음(wrap)정렬)
+  
+  사용 가능한 속성 값은
+  justyfy-content(중심축방향item정렬)
+  와 동일하다*/
+  justify-content: center;
+
+  align-content: flex-start;
+  align-content: flex-end;
+  align-content: center;
+  align-content: space-around;
+  align-content: space-evenly;
+  align-content: space-between;
+  /* align-content: first baseline; */
+
+  /* <<<<<<<<<<<<<<>>>>>>>>>>>>>>>> */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+}
