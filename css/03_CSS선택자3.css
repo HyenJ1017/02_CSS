@@ -103,8 +103,8 @@ A선택자 > B선택자:nth-last-child(숫자)
  */
  #test2 > p:nth-last-of-type(4):hover{
   background-color: yellow;
- rotate: 360deg; 
- /* transition-duration: 1s; */
+  rotate: 360deg; 
+  /* transition-duration: 10s; */
  }
 
  #test2 > p:nth-last-of-type(4){

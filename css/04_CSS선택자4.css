@@ -7,7 +7,7 @@ div[name ~= 'aaa']{
 div[name = 'aaa']{ background-color: greenyellow;} */
 
 
-/* |= : "-"(하이픈) 기호 합쪽 단어가 일치하면 선택 */
+/* |= : "-"(하이픈) 기호 앞쪽 단어가 일치하면 선택 */
 div[class |= 'str']{
   color: red;
   font-weight: bold;
